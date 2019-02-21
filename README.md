@@ -1,37 +1,71 @@
-# Definição da Tarefa:
+# Teste Prático de Desenvolvimento Front-End
 
-Olá
+## Estruturar e Integrar
+Utilizando a API **TVMaze**, você deverá estruturar uma aplicação para basicamente 2 funcionalidades:
+- Exibir uma lista de Séries de TV;
+- Detalhar uma Série selecionada;
 
-Sua tarefa é construir uma view simples para mostrar uma lista de filmes com a imagem do cartaz, título do filme e gênero, possibilitando aplicar um filtro de gênero à busca.
-Ex.: colocar um dropdown e/ou input de texto para pesquisar um filme podendo escolher gênero, como comédia. 
+Documentação da API: http://www.tvmaze.com/api
 
-A lista de filmes deve ser obtida de uma API REST pública da OMDb usando, para isso, a biblioteca axios.
+### 1. Fonte da Informação
+O termo de busca pode ser fixo e escolhido por você.
 
-Não é necessário se preocupar com um design bonito, vamos avaliar a organização do
-código/componentes e aplicação da lógica de programação.
+Exemplo de URL/Chamada: http://api.tvmaze.com/search/shows?q=robot
+```
+q = query (termo utilizado na busca)
+```
 
-A lista de resultados deve ser enxuta, queremos avaliar o uso da biblioteca axios para
-requisições HTTP, portanto não estamos preocupados com um site que mostre muitos resultados de busca.
+### 2. Rota Inicial: Lista
+A lista consiste nos resultados da busca e deve conter as seguintes informações para cada item*:
+- Título da Série
+- Gênero
+- Pôster
 
-Sinta-se à vontade para instalar e usar quaisquer bibliotecas de suporte que desejar.
+### 3. Rota de Detalhes
+Ao clicar em alguma Série da lista, a aplicação deverá transicionar para uma nova rota, a de detalhes da Série, com as seguintes informações:
+- Pôster
+- Título
+- Gênero
+- Sinopse
+- Data de lançamento
 
-# Como inicializar o projeto:
+### 4. Opcionais
+- Colocar um campo de texto para mudar o termo de pesquisa e atualizar a lista
+- Possibilidade de favoritar uma Série. 
+  (não é necessário ter uma rota para Séries favoritas, só é preciso que a aplicação se lembre que um programa é favorito quando ele aparecer na lista e nos detalhes. Será necessário adicionar um item no layout para mostrar que o programa é favorito)
 
-<ol>
-  <li>Descomprimir a pasta prova-flowsense.zip</li>
-  <li>Navegar até a pasta descomprimida</li>
-  <li>Executar o seguinte comando: npm install</li>
-  <li>Servir o site e começar codando: npm start</li>
-</ol>
+## Layout e Estilos
+Livre!
+Você pode planejar e estilizar a sua maneira. Ou utilizar frameworks para auxiliar.
+Com certeza, a habilidade nesse quesito é um diferencial.
+Lembre-se que design responsivo e fluído são indispensáveis nos dias de hoje.
 
-# API Rest OMDb:
+## Tecnologia Recomendada
+- ReactJS, mas você pode não usar bibliotecas ou usar outra de seu conhecimento, se preferir:
+  - (E se quiser, pode inicializar o projeto através do próprio `create-react-app` mesmo);
+- Conhecer um pouco do nosso Framework é legal também: [Aphrodite React](https://ingresse.github.io/aphrodite-react);
 
-Entre em http://www.omdbapi.com/apikey.aspx e registre uma chave de API gratuita
+## Quesitos Considerados
+- Organização Estrutural;
+- Práticas de Desenvolvimento;
+- Coesão de Código (nomenclatura de variáveis, por exemplo);
+- Escrita;
+- Navegabilidade;
+- Visual;
+- Design Responsivo;
 
-Saiba como usar a API em http://www.omdbapi.com
+## Dicas
+Aqui na Ingresse nós utilizamos diversas técnicas no desenvolvimento, mas no front-end basicamente são:
+- JavaScript, ES5 pra cima;
+- CSS, principalmente SASS;
+- Semântica, tanto no HTML quanto nos anteriores;
 
-ATENÇÃO: essa API gratuita tem um limite de 1000 requisições por dia. Cuidado para não usar mais do que o permitido.
+## Dúvidas
+Demonstrar interesse é algo fundamental.
+Esteja a vontade para tirar dúvidas e não se importe com o nível delas.
 
-# Biblioteca axios:
+## Submissão
+Após finalizado, você deve criar um repositório público no seu perfil do GitHub e nos enviar o link.
+A avaliação será feita a partir do momento de recebimento do link.
 
-https://alligator.io/react/axios-react/
+**Bom código e boa sorte**
