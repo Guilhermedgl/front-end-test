@@ -8,10 +8,10 @@ const Detail = (props) => {
     return (
       <Grid container>
         <Grid.Row>
-          <Grid.Column width={3} celled>
+          <Grid.Column width={3} >
             <Image src={image.medium} />
           </Grid.Column>
-          <Grid.Column width={10} fluid>
+          <Grid.Column width={10} >
             <Card
               fluid
               header={name}
