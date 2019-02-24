@@ -9,7 +9,7 @@ class Main extends Component {
       <div>
         <Grid container centered>
         <Form onSubmit={this.props.getMovies}>
-          <Input onChange={this.props.handleFormSubmit} placeholder='Search...' action='Enter' />
+          <Input onChange={this.props.handleFormSubmit} placeholder='Search' icon='search' />
         </Form>
         </Grid>
         <Grid stackable columns={5} centered padded='horizontally'>
@@ -21,7 +21,8 @@ class Main extends Component {
                 tablet={4}>
                 <Link to={`/detail/${idx}`}>
                   <Card
-                    image={movie.show.image.medium}
+                    raised
+                    image={this.props.checkImage(movie.show.image)}
                     header={movie.show.name}
                     meta={movie.show.genres.join(', ')}
                   />

@@ -9,7 +9,7 @@ const Detail = (props) => {
       <Grid container>
         <Grid.Row>
           <Grid.Column width={3} >
-            <Image src={image.medium} />
+            <Image src={props.checkImage(image)} />
           </Grid.Column>
           <Grid.Column width={10} >
             <Card
@@ -17,13 +17,13 @@ const Detail = (props) => {
               header={name}
               meta={genres.join(', ')}
               description={summary}
-              extra={`Release ${premiered}`}
+              extra={`Release date ${premiered}`}
             />
           </Grid.Column>
         </Grid.Row>
         <Grid.Column>
           <Link to='/'>
-            <Button>Back</Button>
+            <Button color='blue'>Back</Button>
           </Link>
         </Grid.Column>
       </Grid>
